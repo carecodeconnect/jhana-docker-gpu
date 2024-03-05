@@ -1,5 +1,5 @@
 # Use the NVIDIA CUDA 12.3.2 base image with Ubuntu 20.04
-FROM nvidia/cuda:12.3.2-base-ubuntu20.04
+FROM nvidia/cuda:12.3.2-devel-ubuntu20.04
 
 # Install Python, pip, and other necessary packages
 RUN apt-get update && apt-get install -y \
