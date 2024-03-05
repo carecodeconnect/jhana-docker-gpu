@@ -24,8 +24,8 @@ def gpu_multiply():
 
     # Get matrices from the POST request
     data = request.get_json()
-    matrix_a = torch.tensor(data['matrix_a']).cuda()
-    matrix_b = torch.tensor(data['matrix_b']).cuda()
+    matrix_a = torch.tensor(data['matrix_a']).cuda().float()  # Convert to float after moving to CUDA
+    matrix_b = torch.tensor(data['matrix_b']).cuda().float()  # Convert to float after moving to CUDA
 
     # Perform matrix multiplication
     result = torch.matmul(matrix_a, matrix_b)
